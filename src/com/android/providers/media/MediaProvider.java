@@ -4705,7 +4705,8 @@ public class MediaProvider extends ContentProvider {
                 == PackageManager.PERMISSION_GRANTED);
         }
 
-        if (path.startsWith(mExternalPath) || path.startsWith(mLegacyPath)) {
+        if (path.startsWith(mExternalPath) || path.startsWith(mLegacyPath)
+                || isSecondaryExternalPath(path)) {
             if (isWrite) {
                 if (!writeGranted) {
                     enforceCallingOrSelfPermissionAndAppOps(
