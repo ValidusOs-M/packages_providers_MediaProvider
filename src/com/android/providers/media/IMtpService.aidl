@@ -20,5 +20,4 @@ interface IMtpService
 {
     void sendObjectAdded(int objectHandle);
     void sendObjectRemoved(int objectHandle);
-    void sendObjectUpdated(int objectHandle);
 }
